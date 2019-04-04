@@ -24,6 +24,7 @@ app.use(bodyP.urlencoded({ extended: false }));
 // on active les cookies
 const cookieP = require('cookie-parser');
 app.use(cookieP());
+
 /*// On configure Express pour servir les fichers contenus dans public/
 // à l'url /s
 app.use('/s', express.static('public'));*/
