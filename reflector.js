@@ -108,6 +108,40 @@ app.all('/headers', function(req, res)
                       }
 );
 
+// On définit une route pour l'url /
+// Quel que soit la requette
+/*app.all('/', function(req, res)
+              {
+                let resultat = "";
+                if( Object.keys(req.body) != 0)
+                {
+                  resultat += 'body: ' + '<br>' + req._parsedUrl.query + '</br>';
+                  for(let i in req.body)
+                  {
+                    resultat += i + ': ' + req.body[i] + '</br>';
+                  }
+                }
+                if( Object.keys(req.body) != 0)
+                {
+                  resultat += 'headers: ' + '<br>';
+                  for(let i in req.headers)
+                  {
+                    resultat += i + ': ' + req.headers[i] + '</br>';
+                  }
+                }
+                if( Object.keys(req.body) != 0)
+                {
+                  resultat += 'cookies: ' + '<br>';
+                  for(let i in req.cookies)
+                  {
+                    resultat += i + ': ' + req.cookies[i] + '</br>';
+                  }
+                }
+                
+                res.send(resultat);
+              }
+);*/
+
 // On lance l'application
 // (process.env.PORT est un paramètre fourni par Glitch)
 app.listen(process.env.PORT);
